@@ -30,7 +30,7 @@ def drawScreen():
 
     # hien thi text
     screen.blit(text, (width_of_window / 2 - text.get_width() / 2, height_of_window / 2 - text.get_height() / 2))
-
+    
     # khóa cửa sở pygame
     pg.display.update()
 
