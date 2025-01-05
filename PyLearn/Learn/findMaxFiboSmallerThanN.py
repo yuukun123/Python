@@ -15,4 +15,3 @@ if __name__ == '__main__':
     n = int(input("Enter a number: "))
     fibo(n)
     print("The maximum Fibonacci number smaller than", n, "is", findMaxFiboSmallerThanN(n))
-    
