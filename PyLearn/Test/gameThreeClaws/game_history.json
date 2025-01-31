@@ -1,0 +1,100 @@
+[
+    {
+        "players": {
+            "yuu": 9,
+            "Bot1": 2,
+            "Bot2": 6,
+            "Bot3": 6
+        },
+        "bets": {
+            "yuu": 50,
+            "Bot1": 73,
+            "Bot2": 71,
+            "Bot3": 51
+        },
+        "winner": "yuu"
+    },
+    {
+        "players": {
+            "yuu": 0,
+            "Bot1": 8,
+            "Bot2": 8,
+            "Bot3": 3
+        },
+        "bets": {
+            "yuu": 50,
+            "Bot1": 73,
+            "Bot2": 50,
+            "Bot3": 67
+        },
+        "winner": "Bot1"
+    },
+    {
+        "game_number": 3,
+        "time": "2025-01-28 12:55:35",
+        "players": {
+            "yuu": 5,
+            "Bot1": 6,
+            "Bot2": 6,
+            "Bot3": 0
+        },
+        "bets": {
+            "yuu": 50,
+            "Bot1": 74,
+            "Bot2": 62,
+            "Bot3": 80
+        },
+        "winner": "Bot1"
+    },
+    {
+        "game_number": 4,
+        "time": "2025-01-28 12:55:39",
+        "players": {
+            "yuu": 0,
+            "Bot1": 9,
+            "Bot2": 5,
+            "Bot3": 9
+        },
+        "bets": {
+            "yuu": 100,
+            "Bot1": 94,
+            "Bot2": 76,
+            "Bot3": 75
+        },
+        "winner": "Bot1"
+    },
+    {
+        "game_number": 5,
+        "time": "2025-01-28 12:55:42",
+        "players": {
+            "yuu": 0,
+            "Bot1": 1,
+            "Bot2": 8,
+            "Bot3": 9
+        },
+        "bets": {
+            "yuu": 400,
+            "Bot1": 50,
+            "Bot2": 79,
+            "Bot3": 85
+        },
+        "winner": "Bot3"
+    },
+    {
+        "game_number": 6,
+        "time": "2025-01-28 13:51:24",
+        "players": {
+            "yuu": 0,
+            "Bot1": 9,
+            "Bot2": 8,
+            "Bot3": 2
+        },
+        "bets": {
+            "yuu": 50,
+            "Bot1": 71,
+            "Bot2": 75,
+            "Bot3": 64
+        },
+        "winner": "Bot1"
+    }
+]
