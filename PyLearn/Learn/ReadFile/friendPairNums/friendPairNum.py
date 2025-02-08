@@ -1,0 +1,36 @@
+from math import isqrt
+
+def calculate(n): # tính tống ước số nhưng không tính chính nó
+    sum_div = 1
+    sqrt_n = isqrt(n)
+    for i in range(2, sqrt_n + 1):
+        if (n % i == 0):
+            sum_div += i
+            if i != n // i:
+                sum_div += n // i
+    return sum_div
+
+def find(k): # tìm số có tổng ước số giống nhau
+    ls = []
+    result = [0] * (k + 1)
+
+    for i in range(1, k + 1):
+        result[i] = calculate(i)
+
+    for i in range(1, k + 1):
+        j = result[i]
+        if j > i and j <= k and result[j] == i:
+            ls.append((i, j))
+    return ls
+
+def friendPairNum():
+    try:
+        with open('soban.inp', 'r') as fr, open('soban.out', 'w') as fw:
+            n = int(fr.read().strip())
+            friend_num = find(n)
+            for i, j in friend_num:
+                fw.write(str(i) + " " + str(j) + "\n")
+    except FileNotFoundError:
+        print("File not found")
+
+friendPairNum()
