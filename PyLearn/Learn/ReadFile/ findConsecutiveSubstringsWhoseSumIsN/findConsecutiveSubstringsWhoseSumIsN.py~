@@ -1,0 +1,33 @@
+def findSubArrays(n):
+    result = []
+    cnt = 0
+    for i in range(n):
+        for j in range(i, n):
+            subArray = list(range(i, j + 1))
+            if sum(subArray) == n:
+                cnt += 1
+                result.append("+".join(map(str, subArray)))
+
+    return cnt, result
+
+def findConsecutiveSubstringsWhoseSumIsN():
+    try:
+        with open('bieudienso.inp', 'r') as fr, open('bieudienso.out', 'w') as fw:
+            n = int(fr.read().strip())
+            cnt, subArray = findSubArrays(n)
+            if cnt == 0:
+                print("0")
+                fw.write("0\n")
+            else:
+                print(cnt)
+                fw.write(str(cnt) + "\n")
+
+                print("\n".join(subArray))
+                fw.write("\n".join(subArray) + "\n")
+
+    except Exception as e:
+        print(e)
+
+findConsecutiveSubstringsWhoseSumIsN()
+
+

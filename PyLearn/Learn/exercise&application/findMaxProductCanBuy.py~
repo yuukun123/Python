@@ -1,0 +1,29 @@
+def max_material(U, V, A, B):
+    max_S = 0
+    N = max(len(A),len(B))
+
+    for i in range(N):
+        for j in range(i + 1, N):
+            # Case 1: i mua theo USD, j mua theo EUR
+            S1 = (U / A[i]) + (V / B[j])
+            # Case 2: i mua theo EUR, j mua theo USD
+            S2 = (V / B[i]) + (U / A[j])
+            # Case 3: cả hai mua theo USD
+            S3 = (U / A[i]) + (U / A[j])
+            # Case 4: cả hai mua theo EUR
+            S4 = (V / B[i]) + (V / B[j])
+
+            # Cập nhật max_S
+            max_S = max(max_S, S1, S2, S3, S4)
+
+    return round(max_S, 2)
+
+
+# Ví dụ sử dụng
+U = 100
+V = 200
+A = [10, 20, 30]
+B = [5, 15, 25]
+
+result = max_material(U, V, A, B)
+print(result)  # Output: 53.33

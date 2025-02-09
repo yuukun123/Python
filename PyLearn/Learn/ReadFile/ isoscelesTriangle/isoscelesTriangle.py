@@ -33,6 +33,8 @@ def isoscelesTriangle():
             print(count_isoscelesTriangle)
             fw.write(str(count_isoscelesTriangle) + "\n")
 
+            print(points)
+
     except FileNotFoundError:
         print("File not found")
     except ValueError:
