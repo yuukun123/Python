@@ -14,7 +14,6 @@ def encryptiionListToDic(n):
 
     return m, encoded_list
 
-
 n = list(input().split())
 m, encoded_list = encryptiionListToDic(n)
 
