@@ -7,16 +7,7 @@ def findUCLN(a, b):
     return a
 
 def findBCNN(a, b):
-    c = a, d = b
-    if a == b:
-        a // findUCLN(a, b)
-    else:
-        a = a // findUCLN(a, b)
-        b = b // findUCLN(a, b)
-        return a * b
-
-
-
+    return a * b // findUCLN(a, b)
 
 a = 6
 b = 10
