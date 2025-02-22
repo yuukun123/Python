@@ -1,0 +1,36 @@
+from tornado.gen import sleep
+
+
+class employee:
+    def __init__(self, Id = "", name = "", age = 0, address = "", salary = 0, time_work = 0):
+        self.__Id = Id
+        self.name = name
+        self.age = age
+        self.address = address
+        self.salary = salary
+        self.time_work = time_work
+
+    def inputInfor(self):
+        self.__Id = input()
+        self.name = input()
+        self.age = int(input())
+        self.address = input()
+        self.salary = int(input())
+        self.time_work = int(input())
+
+    def printInfo(self):
+        print(f"Mã nhân viên: {self.__Id}")
+        print(f"Tên nhân viên: {self.name}")
+        print(f"Tuổi: {self.age}")
+        print(f"Địa chỉ: {self.address}")
+        print(f"Lương: {self.salary}")
+        print(f"Số giờ làm: {self.time_work}")
+        print(f"Tiền thưởng: {self.rewardCalculation()}")
+
+    def rewardCalculation(self):
+        if self.gio_lam >= 200:
+            return self.luong * 0.2
+        elif 100 <= self.gio_lam < 200:
+            return self.luong * 0.1
+        else:
+            return 0
