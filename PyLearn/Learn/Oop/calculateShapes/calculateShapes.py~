@@ -1,0 +1,71 @@
+from math import pi
+
+class shapes:
+    def calculate_area(self):
+        pass
+    def calculate_perimeter(self):
+        pass
+
+class circle(shapes):
+    def __init__(self, radius):
+        self.radius = radius
+
+    def calculate_area(self):
+        return pi * self.radius ** 2
+
+    def calculate_perimeter(self):
+        return 2 * pi * self.radius
+
+    def show_area_and_perimeter(self):
+        print(f"Dien tich: {self.calculate_area():.2f}")
+        print(f"Chu vi: {self.calculate_perimeter():.2f}")
+
+class rectangle(shapes):
+    def __init__(self, width, height):
+        self.width = width
+        self.height = height
+
+    def calculate_area(self):
+        return self.width * self.height
+
+    def calculate_perimeter(self):
+        return 2 * (self.width + self.height)
+
+    def show_area_and_perimeter(self):
+        print(f"Dien tich: {self.calculate_area():.2f}")
+        print(f"Chu vi: {self.calculate_perimeter():.2f}")
+
+class triangle(shapes):
+    def __init__(self, base, height, side_a, side_b, side_c):
+        self.base = base
+        self.height = height
+        self.side_a = side_a
+        self.side_b = side_b
+        self.side_c = side_c
+
+    def calculate_area(self):
+        return 0.5 * self.base * self.height
+
+    def calculate_perimeter(self):
+        return self.side_a + self.side_b + self.side_c
+
+    def show_area_and_perimeter(self):
+        print(f"Dien tich: {self.calculate_area():.2f}")
+        print(f"Chu vi: {self.calculate_perimeter():.2f}")
+
+radius = float(input("Nhap ban kinh hinh tron: "))
+circle1 = circle(radius)
+circle1.show_area_and_perimeter()
+
+width = float(input("Nhap chieu dai hinh chu nhat: "))
+height = float(input("Nhap chieu rong hinh chu nhat: "))
+rectangle1 = rectangle(width, height)
+rectangle1.show_area_and_perimeter()
+
+base = float(input("Nhap chieu dai day hinh tam giac: "))
+height = float(input("Nhap chieu cao hinh tam giac: "))
+side_a = float(input("Nhap do dai canh a: "))
+side_b = float(input("Nhap do dai canh b: "))
+side_c = float(input("Nhap do dai canh c: "))
+triangle1 = triangle(base, height, side_a, side_b, side_c)
+triangle1.show_area_and_perimeter()

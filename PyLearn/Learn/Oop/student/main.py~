@@ -1,0 +1,7 @@
+from student import student
+
+if __name__ == '__main__':
+    std = student()
+    std.inputInfor()
+    std.printInfor()
+
